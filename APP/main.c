@@ -108,18 +108,7 @@
 #include "queue.h"
 
 /* Library includes. */
-#include  <stm32f2xx_gpio.h>
-#include  <stm32f2xx_rcc.h>
-#include  <stm32f2xx_fsmc.h>
-#include  <stm32f2xx_usart.h>
-#include  <stm32f2xx_dma.h>
-#include  <stm32f2xx_syscfg.h>
-
-/* Task priorities. */
-
-
-/* Constants related to the LCD. */
-
+#include  <stm32f2xx.h>
 
 
 /* The check task uses the sprintf function so requires a little more stack. */
@@ -128,15 +117,6 @@
 /* The time between cycles of the 'check' task. */
 #define mainDELAY						( ( TickType_t ) 100 / portTICK_PERIOD_MS )
 
-
-
-
-/*-----------------------------------------------------------*/
-
-/* The queue used to send messages to the LCD task. */
-QueueHandle_t xLCDQueue;
-
-/*-----------------------------------------------------------*/
 
 static void  BSP_LED_Init()
 {
@@ -257,14 +237,3 @@ static void vLed4Task( void *pvParameters )
 	}
 }
 
-
-
-#ifdef  DEBUG
-/* Keep the linker happy. */
-void assert_failed( unsigned char* pcFile, unsigned long ulLine )
-{
-	for( ;; )
-	{
-	}
-}
-#endif

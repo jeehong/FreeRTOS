@@ -841,8 +841,8 @@ ARM Macro Assembler    Page 13
   424 00000018         
   425 00000018                 END
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\cstart
-up.d -o.\cstartup.o -Ie:\Keil_v5\ARM\RV31\INC -Ie:\Keil_v5\ARM\PACK\ARM\CMSIS\3
+Command Line: --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\obj\cstartup.d
+ -o.\obj\cstartup.o -Ie:\Keil_v5\ARM\RV31\INC -Ie:\Keil_v5\ARM\PACK\ARM\CMSIS\3
 
 
 

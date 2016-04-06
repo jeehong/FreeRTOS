@@ -1,5 +1,0 @@
---cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" 
--I e:\Keil_v46\ARM\RV31\INC 
--I e:\Keil_v46\ARM\CMSIS\Include 
--I e:\Keil_v46\ARM\Inc\ST\STM32F2xx 
---list ".\cstartup1.lst" --xref -o ".\cstartup1.o" --depend ".\cstartup1.d" "..\STMLIB\startup\cstartup1.s"

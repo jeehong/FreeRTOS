@@ -1,5 +1,0 @@
--c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\APP -I..\STMLIB\inc -I..\FreeRTOS\include 
--I e:\Keil_v46\ARM\RV31\INC 
--I e:\Keil_v46\ARM\CMSIS\Include 
--I e:\Keil_v46\ARM\Inc\ST\STM32F2xx 
--DRVDS_ARMCM3_LM3S102 -DUSE_STDPERIPH_DRIVER -o "stm32f2xx_cryp.o" --omf_browse "stm32f2xx_cryp.crf" --depend "stm32f2xx_cryp.d" "..\STMLIB\src\stm32f2xx_cryp.c"
