@@ -1,0 +1,20 @@
+--cpu Cortex-M3
+".\misc.o"
+".\stm32f2xx_gpio.o"
+".\stm32f2xx_it.o"
+".\stm32f2xx_rcc.o"
+".\cstartup.o"
+".\system_stm32f2xx.o"
+".\croutine.o"
+".\event_groups.o"
+".\list.o"
+".\queue.o"
+".\tasks.o"
+".\timers.o"
+".\port.o"
+".\heap_2.o"
+".\main.o"
+--library_type=microlib --strict --scatter ".\OS.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\OS.map" -o .\OS.axf

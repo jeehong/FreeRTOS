@@ -1,0 +1,1852 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Jeehong\Desktop\FreeR\Project\OS.uvproj
+Project File Date:  04/06/2016
+
+<h2>Output:</h2>
+Build target 'FreeRTOS'
+compiling main.c...
+..\APP\main.c(106): error:  #5: cannot open source input file "FreeRTOS.h": No such file or directory
+compiling croutine.c...
+..\FreeRTOS\croutine.c(70): error:  #5: cannot open source input file "FreeRTOS.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\event_groups.c(79): error:  #5: cannot open source input file "FreeRTOS.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\list.c(72): error:  #5: cannot open source input file "FreeRTOS.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\queue.c(78): error:  #5: cannot open source input file "FreeRTOS.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\tasks.c(80): error:  #5: cannot open source input file "FreeRTOS.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\timers.c(78): error:  #5: cannot open source input file "FreeRTOS.h": No such file or directory
+compiling misc.c...
+..\STMLIB\src\misc.c(76): error:  #5: cannot open source input file "misc.h": No such file or directory
+compiling stm32f2xx_gpio.c...
+..\STMLIB\src\stm32f2xx_gpio.c(85): error:  #5: cannot open source input file "stm32f2xx_gpio.h": No such file or directory
+compiling stm32f2xx_it.c...
+..\STMLIB\src\stm32f2xx_it.c(31): error:  #5: cannot open source input file "stm32f2xx_it.h": No such file or directory
+compiling stm32f2xx_rcc.c...
+..\STMLIB\src\stm32f2xx_rcc.c(62): error:  #5: cannot open source input file "stm32f2xx_rcc.h": No such file or directory
+assembling cstartup.s...
+Target not created
+Build target 'FreeRTOS'
+compiling main.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling croutine.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+Target not created
+Build target 'FreeRTOS'
+compiling main.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling croutine.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\portable.h(94): error:  #5: cannot open source input file "portmacro.h": No such file or directory
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+assembling cstartup.s...
+Target not created
+Build target 'FreeRTOS'
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+Target not created
+Build target 'FreeRTOS'
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling stm32f2xx_exti.c...
+Target not created
+Build target 'FreeRTOS'
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+assembling cortexm3_macro_rvds.s...
+Target not created
+Build target 'FreeRTOS'
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+Target not created
+Build target 'FreeRTOS'
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+compiling stm32f2xx_exti.c...
+Target not created
+Build target 'FreeRTOS'
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+Target not created
+Build target 'FreeRTOS'
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+Target not created
+Build target 'FreeRTOS'
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+compiling stm32f2xx_exti.c...
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling port.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+Target not created
+Build target 'FreeRTOS'
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+compiling port.c...
+..\FreeRTOS\include\deprecated_definitions.h(194): error:  #5: cannot open source input file "../../Source/portable/RVDS/ARM_CM3/portmacro.h": No such file or directory
+Target not created
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling main.c...
+compiling port.c...
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Build target 'FreeRTOS'
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+compiling stm32f2xx_exti.c...
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling main.c...
+linking...
+OS.axf: Error: L6218E: Undefined symbol vPortSVCHandler (referred from cstartup.o).
+OS.axf: Error: L6218E: Undefined symbol xPortPendSVHandler (referred from cstartup.o).
+OS.axf: Error: L6218E: Undefined symbol xPortSysTickHandler (referred from cstartup.o).
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortEnterCritical (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortExitCritical (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol pxPortInitialiseStack (referred from tasks.o).
+OS.axf: Error: L6218E: Undefined symbol vPortEndScheduler (referred from tasks.o).
+OS.axf: Error: L6218E: Undefined symbol xPortStartScheduler (referred from tasks.o).
+Target not created
+Build target 'FreeRTOS'
+compiling port.c...
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Build target 'FreeRTOS'
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Rebuild target 'FreeRTOS'
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+assembling cstartup.s...
+compiling stm32f2xx_exti.c...
+assembling cortexm3_macro_rvds.s...
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling main.c...
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Build target 'FreeRTOS'
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Build target 'FreeRTOS'
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Build target 'FreeRTOS'
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Build target 'FreeRTOS'
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Build target 'FreeRTOS'
+assembling cortexm3_macro_rvds.s...
+assembling cstartup.s...
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+compiling stm32f2xx_exti.c...
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling main.c...
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+compiling main.c...
+..\APP\main.c - 0 Error(s), 0 Warning(s).
+Build target 'FreeRTOS'
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Build target 'FreeRTOS'
+assembling cortexm3_macro_rvds.s...
+assembling cstartup.s...
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+compiling stm32f2xx_exti.c...
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling main.c...
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Build target 'FreeRTOS'
+linking...
+OS.axf: Error: L6218E: Undefined symbol pvPortMalloc (referred from event_groups.o).
+OS.axf: Error: L6218E: Undefined symbol vPortFree (referred from event_groups.o).
+Target not created
+Build target 'FreeRTOS'
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/portmacro.h": No such file or directory
+compiling port.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/portmacro.h": No such file or directory
+compiling heap_2.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/portmacro.h": No such file or directory
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/portmacro.h": No such file or directory
+Target not created
+Build target 'FreeRTOS'
+compiling croutine.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/ARM_CM3/portmacro.h": No such file or directory
+compiling event_groups.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/ARM_CM3/portmacro.h": No such file or directory
+compiling list.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/ARM_CM3/portmacro.h": No such file or directory
+compiling queue.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/ARM_CM3/portmacro.h": No such file or directory
+compiling tasks.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/ARM_CM3/portmacro.h": No such file or directory
+compiling timers.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/ARM_CM3/portmacro.h": No such file or directory
+compiling port.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/ARM_CM3/portmacro.h": No such file or directory
+compiling heap_2.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/ARM_CM3/portmacro.h": No such file or directory
+compiling main.c...
+..\FreeRTOS\include\deprecated_definitions.h(85): error:  #5: cannot open source input file "../FreeRTOS/portable/ARM_CM3/portmacro.h": No such file or directory
+Target not created
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7468 RO-data=268 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'FreeRTOS'
+linking...
+Program Size: Code=7468 RO-data=268 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 0 Warning(s).
+Rebuild target 'FreeRTOS'
+assembling cstartup.s...
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+compiling stm32f2xx_exti.c...
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7468 RO-data=268 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7468 RO-data=268 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7292 RO-data=268 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7468 RO-data=268 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Build target 'FreeRTOS'
+linking...
+Program Size: Code=7468 RO-data=268 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 0 Warning(s).
+Build target 'FreeRTOS'
+assembling cstartup.s...
+..\STMLIB\startup\cstartup.s(60): error: A1516E: Bad symbol 'vPortSVCHandler', not defined or external
+Target not created
+Build target 'FreeRTOS'
+assembling cstartup1.s...
+linking...
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerADC1_2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_RX0 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_RX1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_SCE (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_TX (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_RX0 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_RX1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_SCE (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_TX (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCRYP (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDCMI (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_STREAM7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH8 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerETH (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerETHWakeup (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI0 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI15_10 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI9_5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerFLASH (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerFSMC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerHASH_RNG (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C1_ER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C1_EV (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C2_ER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C2_EV (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C3_ER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C3_EV (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS_EP1_IN (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS_EP1_OUT (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS_WKUP (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerPVD (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerRCC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerRTC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerRTCAlarm (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSDIO (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSPI1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSPI2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSPI3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTAMPER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_BRK (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_CC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_TRG_COM (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_UP (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_BRK_TIM12 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_CC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_TRG_COM_TIM14 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_UP_TIM13 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSBWakeUp (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerWWDG (referred from cstartup1.o).
+Target not created
+Build target 'FreeRTOS'
+assembling cstartup1.s...
+linking...
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerADC1_2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_RX0 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_RX1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_SCE (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_TX (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_RX0 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_RX1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_SCE (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_TX (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCRYP (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDCMI (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_STREAM7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH8 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerETH (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerETHWakeup (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI0 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI15_10 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI9_5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerFLASH (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerFSMC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerHASH_RNG (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C1_ER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C1_EV (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C2_ER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C2_EV (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C3_ER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C3_EV (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS_EP1_IN (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS_EP1_OUT (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS_WKUP (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerPVD (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerRCC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerRTC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerRTCAlarm (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSDIO (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSPI1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSPI2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSPI3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTAMPER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_BRK (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_CC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_TRG_COM (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_UP (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_BRK_TIM12 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_CC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_TRG_COM_TIM14 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_UP_TIM13 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSBWakeUp (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerWWDG (referred from cstartup1.o).
+Target not created
+Build target 'FreeRTOS'
+compiling stm32f2xx_adc.c...
+compiling stm32f2xx_can.c...
+compiling stm32f2xx_crc.c...
+compiling stm32f2xx_cryp.c...
+compiling stm32f2xx_cryp_aes.c...
+compiling stm32f2xx_cryp_des.c...
+compiling stm32f2xx_cryp_tdes.c...
+compiling stm32f2xx_dac.c...
+compiling stm32f2xx_dbgmcu.c...
+compiling stm32f2xx_dcmi.c...
+compiling stm32f2xx_dma.c...
+compiling stm32f2xx_exti.c...
+compiling stm32f2xx_flash.c...
+compiling stm32f2xx_fsmc.c...
+compiling stm32f2xx_hash.c...
+compiling stm32f2xx_hash_md5.c...
+compiling stm32f2xx_hash_sha1.c...
+compiling stm32f2xx_i2c.c...
+compiling stm32f2xx_iwdg.c...
+compiling stm32f2xx_pwr.c...
+compiling stm32f2xx_rng.c...
+compiling stm32f2xx_rtc.c...
+compiling stm32f2xx_sdio.c...
+compiling stm32f2xx_spi.c...
+compiling stm32f2xx_syscfg.c...
+compiling stm32f2xx_tim.c...
+compiling stm32f2xx_usart.c...
+compiling stm32f2xx_wwdg.c...
+compiling system_stm32f2xx.c...
+linking...
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerADC1_2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_RX0 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_RX1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_SCE (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN1_TX (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_RX0 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_RX1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_SCE (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCAN2_TX (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerCRYP (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDCMI (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_CH7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA1_STREAM7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerDMA2_CH8 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerETH (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerETHWakeup (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI0 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI15_10 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerEXTI9_5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerFLASH (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerFSMC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerHASH_RNG (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C1_ER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C1_EV (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C2_ER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C2_EV (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C3_ER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerI2C3_EV (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS_EP1_IN (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS_EP1_OUT (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerOTG_HS_WKUP (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerPVD (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerRCC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerRTC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerRTCAlarm (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSDIO (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSPI1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSPI2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerSPI3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTAMPER (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_BRK (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_CC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_TRG_COM (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM1_UP (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM7 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_BRK_TIM12 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_CC (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_TRG_COM_TIM14 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerTIM8_UP_TIM13 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART1 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART2 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART3 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART4 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART5 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSART6 (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerUSBWakeUp (referred from cstartup1.o).
+OS.axf: Error: L6218E: Undefined symbol BSP_IntHandlerWWDG (referred from cstartup1.o).
+Target not created
+Build target 'FreeRTOS'
+assembling cstartup1.s...
+..\STMLIB\startup\cstartup1.s(92): error: A1516E: Bad symbol 'BSP_IntHandlerWWDG', not defined or external
+..\STMLIB\startup\cstartup1.s(93): error: A1516E: Bad symbol 'BSP_IntHandlerPVD', not defined or external
+..\STMLIB\startup\cstartup1.s(94): error: A1516E: Bad symbol 'BSP_IntHandlerTAMPER', not defined or external
+..\STMLIB\startup\cstartup1.s(95): error: A1516E: Bad symbol 'BSP_IntHandlerRTC', not defined or external
+..\STMLIB\startup\cstartup1.s(96): error: A1516E: Bad symbol 'BSP_IntHandlerFLASH', not defined or external
+..\STMLIB\startup\cstartup1.s(97): error: A1516E: Bad symbol 'BSP_IntHandlerRCC', not defined or external
+..\STMLIB\startup\cstartup1.s(98): error: A1516E: Bad symbol 'BSP_IntHandlerEXTI0', not defined or external
+..\STMLIB\startup\cstartup1.s(99): error: A1516E: Bad symbol 'BSP_IntHandlerEXTI1', not defined or external
+..\STMLIB\startup\cstartup1.s(100): error: A1516E: Bad symbol 'BSP_IntHandlerEXTI2', not defined or external
+..\STMLIB\startup\cstartup1.s(101): error: A1516E: Bad symbol 'BSP_IntHandlerEXTI3', not defined or external
+..\STMLIB\startup\cstartup1.s(102): error: A1516E: Bad symbol 'BSP_IntHandlerEXTI4', not defined or external
+..\STMLIB\startup\cstartup1.s(103): error: A1516E: Bad symbol 'BSP_IntHandlerDMA1_CH1', not defined or external
+..\STMLIB\startup\cstartup1.s(104): error: A1516E: Bad symbol 'BSP_IntHandlerDMA1_CH2', not defined or external
+..\STMLIB\startup\cstartup1.s(105): error: A1516E: Bad symbol 'BSP_IntHandlerDMA1_CH3', not defined or external
+..\STMLIB\startup\cstartup1.s(106): error: A1516E: Bad symbol 'BSP_IntHandlerDMA1_CH4', not defined or external
+..\STMLIB\startup\cstartup1.s(107): error: A1516E: Bad symbol 'BSP_IntHandlerDMA1_CH5', not defined or external
+..\STMLIB\startup\cstartup1.s(108): error: A1516E: Bad symbol 'BSP_IntHandlerDMA1_CH6', not defined or external
+..\STMLIB\startup\cstartup1.s(109): error: A1516E: Bad symbol 'BSP_IntHandlerDMA1_CH7', not defined or external
+..\STMLIB\startup\cstartup1.s(110): error: A1516E: Bad symbol 'BSP_IntHandlerADC1_2', not defined or external
+..\STMLIB\startup\cstartup1.s(111): error: A1516E: Bad symbol 'BSP_IntHandlerCAN1_TX', not defined or external
+..\STMLIB\startup\cstartup1.s(112): error: A1516E: Bad symbol 'BSP_IntHandlerCAN1_RX0', not defined or external
+..\STMLIB\startup\cstartup1.s(113): error: A1516E: Bad symbol 'BSP_IntHandlerCAN1_RX1', not defined or external
+..\STMLIB\startup\cstartup1.s(114): error: A1516E: Bad symbol 'BSP_IntHandlerCAN1_SCE', not defined or external
+..\STMLIB\startup\cstartup1.s(115): error: A1516E: Bad symbol 'BSP_IntHandlerEXTI9_5', not defined or external
+..\STMLIB\startup\cstartup1.s(116): error: A1516E: Bad symbol 'BSP_IntHandlerTIM1_BRK', not defined or external
+..\STMLIB\startup\cstartup1.s(117): error: A1516E: Bad symbol 'BSP_IntHandlerTIM1_UP', not defined or external
+..\STMLIB\startup\cstartup1.s(118): error: A1516E: Bad symbol 'BSP_IntHandlerTIM1_TRG_COM', not defined or external
+..\STMLIB\startup\cstartup1.s(119): error: A1516E: Bad symbol 'BSP_IntHandlerTIM1_CC', not defined or external
+..\STMLIB\startup\cstartup1.s(120): error: A1516E: Bad symbol 'BSP_IntHandlerTIM2', not defined or external
+..\STMLIB\startup\cstartup1.s(121): error: A1516E: Bad symbol 'BSP_IntHandlerTIM3', not defined or external
+..\STMLIB\startup\cstartup1.s(122): error: A1516E: Bad symbol 'BSP_IntHandlerTIM4', not defined or external
+..\STMLIB\startup\cstartup1.s(123): error: A1516E: Bad symbol 'BSP_IntHandlerI2C1_EV', not defined or external
+..\STMLIB\startup\cstartup1.s(124): error: A1516E: Bad symbol 'BSP_IntHandlerI2C1_ER', not defined or external
+..\STMLIB\startup\cstartup1.s(125): error: A1516E: Bad symbol 'BSP_IntHandlerI2C2_EV', not defined or external
+..\STMLIB\startup\cstartup1.s(126): error: A1516E: Bad symbol 'BSP_IntHandlerI2C2_ER', not defined or external
+..\STMLIB\startup\cstartup1.s(127): error: A1516E: Bad symbol 'BSP_IntHandlerSPI1', not defined or external
+..\STMLIB\startup\cstartup1.s(128): error: A1516E: Bad symbol 'BSP_IntHandlerSPI2', not defined or external
+..\STMLIB\startup\cstartup1.s(129): error: A1516E: Bad symbol 'BSP_IntHandlerUSART1', not defined or external
+..\STMLIB\startup\cstartup1.s(130): error: A1516E: Bad symbol 'BSP_IntHandlerUSART2', not defined or external
+..\STMLIB\startup\cstartup1.s(131): error: A1516E: Bad symbol 'BSP_IntHandlerUSART3', not defined or external
+..\STMLIB\startup\cstartup1.s(132): error: A1516E: Bad symbol 'BSP_IntHandlerEXTI15_10', not defined or external
+..\STMLIB\startup\cstartup1.s(133): error: A1516E: Bad symbol 'BSP_IntHandlerRTCAlarm', not defined or external
+..\STMLIB\startup\cstartup1.s(134): error: A1516E: Bad symbol 'BSP_IntHandlerUSBWakeUp', not defined or external
+..\STMLIB\startup\cstartup1.s(135): error: A1516E: Bad symbol 'BSP_IntHandlerTIM8_BRK_TIM12', not defined or external
+..\STMLIB\startup\cstartup1.s(136): error: A1516E: Bad symbol 'BSP_IntHandlerTIM8_UP_TIM13', not defined or external
+..\STMLIB\startup\cstartup1.s(137): error: A1516E: Bad symbol 'BSP_IntHandlerTIM8_TRG_COM_TIM14', not defined or external
+..\STMLIB\startup\cstartup1.s(138): error: A1516E: Bad symbol 'BSP_IntHandlerTIM8_CC', not defined or external
+..\STMLIB\startup\cstartup1.s(139): error: A1516E: Bad symbol 'BSP_IntHandlerDMA1_STREAM7', not defined or external
+..\STMLIB\startup\cstartup1.s(140): error: A1516E: Bad symbol 'BSP_IntHandlerFSMC', not defined or external
+..\STMLIB\startup\cstartup1.s(141): error: A1516E: Bad symbol 'BSP_IntHandlerSDIO', not defined or external
+Target not created
+Build target 'FreeRTOS'
+assembling cstartup1.s...
+..\STMLIB\startup\cstartup1.s(70): error: A1516E: Bad symbol '__initial_spTop', not defined or external
+Target not created
+Build target 'FreeRTOS'
+assembling cstartup1.s...
+linking...
+OS.axf: Error: L6218E: Undefined symbol SystemInit (referred from cstartup1.o).
+Target not created
+Build target 'FreeRTOS'
+assembling cstartup1.s...
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'FreeRTOS'
+assembling cstartup1.s...
+linking...
+OS.axf: Error: L6218E: Undefined symbol SystemInit (referred from cstartup1.o).
+Target not created
+Build target 'FreeRTOS'
+assembling cstartup1.s...
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'FreeRTOS'
+assembling cstartup1.s...
+..\STMLIB\startup\cstartup1.s(70): error: A1516E: Bad symbol '__initial_spTop', not defined or external
+Target not created
+Build target 'FreeRTOS'
+assembling cstartup1.s...
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'FreeRTOS'
+assembling cstartup.s...
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.351V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+..\APP\main.c(218): warning:  #39-D: division by zero
+..\APP\main.c(220): warning:  #39-D: division by zero
+..\APP\main.c(229): warning:  #39-D: division by zero
+..\APP\main.c(231): warning:  #39-D: division by zero
+..\APP\main.c(240): warning:  #39-D: division by zero
+..\APP\main.c(242): warning:  #39-D: division by zero
+..\APP\main.c(251): warning:  #39-D: division by zero
+..\APP\main.c(253): warning:  #39-D: division by zero
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'FreeRTOS'
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 0 Warning(s).
+Rebuild target 'FreeRTOS'
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+assembling cstartup.s...
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+..\APP\main.c(218): warning:  #39-D: division by zero
+..\APP\main.c(220): warning:  #39-D: division by zero
+..\APP\main.c(229): warning:  #39-D: division by zero
+..\APP\main.c(231): warning:  #39-D: division by zero
+..\APP\main.c(240): warning:  #39-D: division by zero
+..\APP\main.c(242): warning:  #39-D: division by zero
+..\APP\main.c(251): warning:  #39-D: division by zero
+..\APP\main.c(253): warning:  #39-D: division by zero
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 9 Warning(s).
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.351V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.351V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.351V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7468 RO-data=420 RW-data=104 ZI-data=18632  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.351V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'FreeRTOS'
+compiling misc.c...
+compiling stm32f2xx_gpio.c...
+compiling stm32f2xx_it.c...
+compiling stm32f2xx_rcc.c...
+compiling system_stm32f2xx.c...
+compiling main.c...
+linking...
+Program Size: Code=7932 RO-data=420 RW-data=124 ZI-data=18636  
+"OS.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.345V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'FreeRTOS'
+compiling croutine.c...
+compiling event_groups.c...
+compiling list.c...
+compiling queue.c...
+..\FreeRTOS\queue.c(472): warning:  #177-D: function "prvInitialiseMutex" was declared but never referenced
+compiling tasks.c...
+compiling timers.c...
+compiling port.c...
+compiling heap_2.c...
+compiling main.c...
+linking...
+Program Size: Code=7932 RO-data=420 RW-data=124 ZI-data=18636  
+"OS.axf" - 0 Error(s), 1 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.351V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'FreeRTOS'
+compiling main.c...
+linking...
+Program Size: Code=7948 RO-data=420 RW-data=124 ZI-data=18636  
+"OS.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.351V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
+Build target 'FreeRTOS'
+compiling main.c...
+linking...
+Program Size: Code=7932 RO-data=420 RW-data=124 ZI-data=18636  
+"OS.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Users\\Jeehong\\Desktop\\FreeR\\Project\\OS.AXF" 
+Set JLink Project File to "C:\Users\Jeehong\Desktop\FreeR\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N : 20080643 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F205RG
+VTarget = 3.351V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...
