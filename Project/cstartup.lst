@@ -841,16 +841,16 @@ ARM Macro Assembler    Page 13
   424 00000018         
   425 00000018                 END
               00000000 
-Command Line: --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\obj\cstartup.d
- -o.\obj\cstartup.o -Ie:\Keil_v5\ARM\RV31\INC -Ie:\Keil_v5\ARM\PACK\ARM\CMSIS\3
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\obj\cs
+tartup.d -o.\obj\cstartup.o -Ie:\Keil_v5\ARM\RV31\INC -Ie:\Keil_v5\ARM\PACK\ARM
 
 
 
 ARM Macro Assembler    Page 14 
 
 
-.20.4\CMSIS\Include -Ie:\Keil_v5\ARM\Inc\ST\STM32F2xx --predefine="__MICROLIB S
-ETA 1" --list=.\cstartup.lst ..\STMLIB\startup\cstartup.s
+\CMSIS\3.20.4\CMSIS\Include -Ie:\Keil_v5\ARM\Inc\ST\STM32F2xx --predefine="__MI
+CROLIB SETA 1" --list=.\cstartup.lst ..\STMLIB\startup\cstartup.s
 
 
 

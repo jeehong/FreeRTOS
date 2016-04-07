@@ -1,10 +1,15 @@
 --cpu Cortex-M3
+".\obj\main.o"
+".\obj\serial.o"
+".\obj\app_led.o"
+".\obj\uarttest.o"
 ".\obj\misc.o"
 ".\obj\stm32f2xx_gpio.o"
 ".\obj\stm32f2xx_it.o"
 ".\obj\stm32f2xx_rcc.o"
 ".\obj\cstartup.o"
 ".\obj\system_stm32f2xx.o"
+".\obj\stm32f2xx_usart.o"
 ".\obj\croutine.o"
 ".\obj\event_groups.o"
 ".\obj\list.o"
@@ -13,8 +18,7 @@
 ".\obj\timers.o"
 ".\obj\port.o"
 ".\obj\heap_2.o"
-".\obj\main.o"
---library_type=microlib --nodebug --strict --scatter ".\Obj\OS.sct"
+--library_type=microlib --strict --scatter ".\Obj\OS.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\OS.map" -o .\Obj\OS.axf

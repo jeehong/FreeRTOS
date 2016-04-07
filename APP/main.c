@@ -109,63 +109,15 @@
 
 /* Library includes. */
 #include  <stm32f2xx.h>
+#include "app_led.h"
+#include "serial.h"
+#include "uarttest.h"
 
 
 /* The check task uses the sprintf function so requires a little more stack. */
 #define mainLED_TASK_STACK_SIZE			( configMINIMAL_STACK_SIZE + 50 )
 
 /* The time between cycles of the 'check' task. */
-#define mainDELAY						( ( TickType_t ) 100 / portTICK_PERIOD_MS )
-
-
-static void  BSP_LED_Init()
-{
-    GPIO_InitTypeDef  GPIO_InitStructure;
-
-
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12;
-    GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_OUT;
-    GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-    GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
-		
-	  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11;
-    GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_OUT;
-    GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-    GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
-	
-		RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
-    GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_OUT;
-    GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-    GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOB, &GPIO_InitStructure);
-		
-		RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
-    GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_OUT;
-    GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-    GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
-    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-
-    GPIO_Init(GPIOB, &GPIO_InitStructure);
-
-		GPIO_SetBits(GPIOA, GPIO_Pin_12);
-		GPIO_SetBits(GPIOA, GPIO_Pin_11);	
-		GPIO_ResetBits(GPIOB, GPIO_Pin_0);
-		GPIO_SetBits(GPIOB, GPIO_Pin_1);
-}
-
-static void vLed1Task( void *pvParameters );
-static void vLed2Task( void *pvParameters );
-static void vLed3Task( void *pvParameters );
-static void vLed4Task( void *pvParameters );
 
 int main( void )
 {
@@ -177,6 +129,7 @@ int main( void )
 	
 	BSP_LED_Init();
 
+	vAltStartComTestTasks( 1, 115200);
 	/* Start the tasks defined within this file/specific to this demo. */
   xTaskCreate( vLed1Task, "Led1", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
 	xTaskCreate( vLed2Task, "Led2", mainLED_TASK_STACK_SIZE, NULL, 4, NULL );
@@ -193,47 +146,5 @@ int main( void )
 }
 
 
-static void vLed1Task( void *pvParameters )
-{
-  while(1)
-	{
-			GPIO_SetBits(GPIOA, GPIO_Pin_12);
-			vTaskDelay(1900);
-			GPIO_ResetBits(GPIOA, GPIO_Pin_12);
-			vTaskDelay(100);
-	}
-}
 
-static void vLed2Task( void *pvParameters )
-{
-  while(1)
-	{
-			GPIO_SetBits(GPIOA, GPIO_Pin_11);
-			vTaskDelay(9000);
-			GPIO_ResetBits(GPIOA, GPIO_Pin_11);
-			vTaskDelay(1000);
-	}
-}
-
-static void vLed3Task( void *pvParameters )
-{
-  while(1)
-	{
-			GPIO_ResetBits(GPIOB, GPIO_Pin_0);
-			vTaskDelay(19000);
-			GPIO_SetBits(GPIOB, GPIO_Pin_0);
-			vTaskDelay(1000);
-	}
-}
-
-static void vLed4Task( void *pvParameters )
-{
-  while(1)
-	{
-			GPIO_SetBits(GPIOB, GPIO_Pin_1);
-			vTaskDelay(39000);
-			GPIO_ResetBits(GPIOB, GPIO_Pin_1);
-			vTaskDelay(1000);
-	}
-}
 

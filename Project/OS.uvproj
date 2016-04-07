@@ -49,8 +49,8 @@
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
-          <DebugInformation>0</DebugInformation>
-          <BrowseInformation>0</BrowseInformation>
+          <DebugInformation>1</DebugInformation>
+          <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -402,6 +402,31 @@
       </TargetOption>
       <Groups>
         <Group>
+          <GroupName>APP</GroupName>
+          <Files>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\serial.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\app_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>uarttest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\uarttest.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>LIB</GroupName>
           <Files>
             <File>
@@ -433,6 +458,11 @@
               <FileName>system_stm32f2xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\STMLIB\src\system_stm32f2xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f2xx_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STMLIB\src\stm32f2xx_usart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -478,16 +508,6 @@
               <FileName>heap_2.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\portable\MemMang\heap_2.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>APP</GroupName>
-          <Files>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\main.c</FilePath>
             </File>
           </Files>
         </Group>
