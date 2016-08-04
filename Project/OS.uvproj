@@ -467,7 +467,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>OS</GroupName>
+          <GroupName>FreeRTOS</GroupName>
           <Files>
             <File>
               <FileName>croutine.c</FileName>

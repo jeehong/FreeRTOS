@@ -28,8 +28,8 @@ don't have to block to send. */
 #define comRX_BLOCK_TIME			( ( TickType_t ) 0xffff )
 
 /* The sequence transmitted is from comFIRST_BYTE to and including comLAST_BYTE. */
-#define comFIRST_BYTE				( ' ' )
-#define comLAST_BYTE				( '~' )
+#define comFIRST_BYTE				( 'A' )
+#define comLAST_BYTE				( 'z' )
 
 #define comBUFFER_LEN				( ( UBaseType_t ) ( comLAST_BYTE - comFIRST_BYTE ) + ( UBaseType_t ) 1 )
 #define comINITIAL_RX_COUNT_VALUE	( 0 )
@@ -58,7 +58,7 @@ void vAltStartComTestTasks( UBaseType_t uxPriority, uint32_t ulBaudRate)
 
 	/* The Tx task is spawned with a lower priority than the Rx task. */
 	xTaskCreate( vComTxTask, "COMTx", comSTACK_SIZE, NULL, uxPriority - 1, ( TaskHandle_t * ) NULL );
-	xTaskCreate( vComRxTask, "COMRx", comSTACK_SIZE, NULL, uxPriority, ( TaskHandle_t * ) NULL );
+	/* xTaskCreate( vComRxTask, "COMRx", comSTACK_SIZE, NULL, uxPriority, ( TaskHandle_t * ) NULL ); */
 }
 
 
@@ -84,7 +84,7 @@ static portTASK_FUNCTION( vComTxTask, pvParameters )
 			cByteToSend = comFIRST_BYTE;
 		}
 
-		vTaskDelay(100);
+		vTaskDelay(1000);
 	}
 } /*lint !e715 !e818 pvParameters is required for a task function even if it is not referenced. */
 /*-----------------------------------------------------------*/
