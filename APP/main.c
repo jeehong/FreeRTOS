@@ -132,9 +132,9 @@ int main( void )
 	vAltStartComTestTasks( 1, 115200);
 	/* Start the tasks defined within this file/specific to this demo. */
 	xTaskCreate( vLed1Task, "Led1", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
-	xTaskCreate( vLed2Task, "Led2", mainLED_TASK_STACK_SIZE, NULL, 4, NULL );
-	xTaskCreate( vLed3Task, "Led3", mainLED_TASK_STACK_SIZE, NULL, 5, NULL );
-	xTaskCreate( vLed4Task, "Led4", mainLED_TASK_STACK_SIZE, NULL, 6, NULL );
+	/* xTaskCreate( vLed2Task, "Led2", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
+	xTaskCreate( vLed3Task, "Led3", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
+	xTaskCreate( vLed4Task, "Led4", mainLED_TASK_STACK_SIZE, NULL, 3, NULL ); */
 
 
 	/* Start the scheduler. */

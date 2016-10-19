@@ -1,6 +1,8 @@
 #ifndef SERIAL_COMMS_H
 #define SERIAL_COMMS_H
 
+#include "queue.h"
+
 typedef void * xComPortHandle;
 
 typedef enum
@@ -58,6 +60,8 @@ typedef enum
 	ser57600,	
 	ser115200
 } eBaud;
+
+extern QueueHandle_t xCharsForTx;
 
 xComPortHandle xSerialPortInitMinimal( unsigned long ulWantedBaud, unsigned portBASE_TYPE uxQueueLength );
 xComPortHandle xSerialPortInit( eCOMPort ePort, eBaud eWantedBaud, eParity eWantedParity, eDataBits eWantedDataBits, eStopBits eWantedStopBits, unsigned portBASE_TYPE uxBufferLength );

@@ -19,7 +19,7 @@
 
 /* The queue used to hold received characters. */
 static QueueHandle_t xRxedChars;
-static QueueHandle_t xCharsForTx;
+QueueHandle_t xCharsForTx;
 
 /*-----------------------------------------------------------*/
 
@@ -40,7 +40,7 @@ GPIO_InitTypeDef GPIO_InitStructure;
 
 	/* Create the queues used to hold Rx/Tx characters. */
 	xRxedChars = xQueueCreate( uxQueueLength, ( unsigned portBASE_TYPE ) sizeof( signed char ) );
-	xCharsForTx = xQueueCreate( uxQueueLength + 1, ( unsigned portBASE_TYPE ) sizeof( signed char ) );
+	xCharsForTx = xQueueCreate( uxQueueLength, ( unsigned portBASE_TYPE ) sizeof( signed char ) );
 	
 	/* If the queue/semaphore was created correctly then setup the serial port
 	hardware. */
@@ -116,7 +116,7 @@ signed portBASE_TYPE xSerialGetChar( xComPortHandle pxPort, signed char *pcRxedC
 
 void vSerialPutString( xComPortHandle pxPort, const signed char * const pcString, unsigned short usStringLength )
 {
-signed char *pxNext;
+	signed char *pxNext;
 
 	/* A couple of parameters that this port does not use. */
 	( void ) usStringLength;
@@ -140,12 +140,11 @@ signed char *pxNext;
 
 signed portBASE_TYPE xSerialPutChar( xComPortHandle pxPort, signed char cOutChar, TickType_t xBlockTime )
 {
-signed portBASE_TYPE xReturn;
+	signed portBASE_TYPE xReturn;
 
 	if( xQueueSend( xCharsForTx, &cOutChar, xBlockTime ) == pdPASS )
 	{
 		xReturn = pdPASS;
-		USART_ITConfig( USART1, USART_IT_TXE, ENABLE );
 	}
 	else
 	{
@@ -164,24 +163,8 @@ void vSerialClose( xComPortHandle xPort )
 
 void USART1_IRQHandler( void )
 {
-portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
-char cChar;
-
-	if( USART_GetITStatus( USART1, USART_IT_TXE ) == SET )
-	{
-		/* The interrupt was caused by the THR becoming empty.  Are there any
-		more characters to transmit? */
-		if( xQueueReceiveFromISR( xCharsForTx, &cChar, &xHigherPriorityTaskWoken ) == pdTRUE )
-		{
-			/* A character was retrieved from the queue so can be sent to the
-			THR now. */
-			USART_SendData( USART1, cChar );
-		}
-		else
-		{
-			USART_ITConfig( USART1, USART_IT_TXE, DISABLE );		
-		}		
-	}
+	portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+	char cChar;
 	
 	if( USART_GetITStatus( USART1, USART_IT_RXNE ) == SET )
 	{

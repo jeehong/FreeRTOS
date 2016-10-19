@@ -1,12 +1,20 @@
 
 /* Scheduler include files. */
 #include <stdlib.h>
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
 #include "FreeRTOS.h"
 #include "task.h"
+#include "queue.h"
 
 /* Demo program include files. */
 #include "serial.h"
 #include "uarttest.h"
+
+
+/* Library includes. */
+#include "stm32f2xx.h"
 
 
 #define comSTACK_SIZE				configMINIMAL_STACK_SIZE
@@ -31,7 +39,7 @@ don't have to block to send. */
 #define comFIRST_BYTE				( 'A' )
 #define comLAST_BYTE				( 'z' )
 
-#define comBUFFER_LEN				( ( UBaseType_t ) ( comLAST_BYTE - comFIRST_BYTE ) + ( UBaseType_t ) 1 )
+#define comBUFFER_LEN				(100)
 #define comINITIAL_RX_COUNT_VALUE	( 0 )
 
 /* Handle to the com port used by both tasks. */
@@ -57,8 +65,20 @@ void vAltStartComTestTasks( UBaseType_t uxPriority, uint32_t ulBaudRate)
 	xSerialPortInitMinimal( ulBaudRate, comBUFFER_LEN );
 
 	/* The Tx task is spawned with a lower priority than the Rx task. */
-	xTaskCreate( vComTxTask, "COMTx", comSTACK_SIZE, NULL, uxPriority - 1, ( TaskHandle_t * ) NULL );
-	/* xTaskCreate( vComRxTask, "COMRx", comSTACK_SIZE, NULL, uxPriority, ( TaskHandle_t * ) NULL ); */
+	xTaskCreate( vComTxTask, "COMTx", comSTACK_SIZE, NULL, uxPriority + 1, ( TaskHandle_t * ) NULL ); 
+	xTaskCreate( vComRxTask, "COMRx", comSTACK_SIZE, NULL, uxPriority, ( TaskHandle_t * ) NULL );
+}
+
+void dbg_string(const char *fmt, ...)
+{
+	va_list vp;
+	char dbg_buf[100];
+	
+	va_start(vp, fmt);
+	vsprintf(dbg_buf, fmt, vp);
+	va_end(vp);
+	
+	vSerialPutString(xPort, (signed char *)&dbg_buf, comNO_BLOCK);
 }
 
 
@@ -66,25 +86,19 @@ void vAltStartComTestTasks( UBaseType_t uxPriority, uint32_t ulBaudRate)
 
 static portTASK_FUNCTION( vComTxTask, pvParameters )
 {
-	char cByteToSend = comFIRST_BYTE;
-	
+	signed char txByte;
 	/* Just to stop compiler warnings. */
 	( void ) pvParameters;
 	
-	for( ;; )
+	for(;;)
 	{
-		xSerialPutChar( xPort, cByteToSend, comNO_BLOCK );
-		if(cByteToSend < comLAST_BYTE)
-			cByteToSend++;
-		else
+		if(xQueueReceive( xCharsForTx, &txByte, 0) == pdTRUE)
 		{
-			xSerialPutChar( xPort, '\r', comNO_BLOCK );
-			vTaskDelay(100);
-			xSerialPutChar( xPort, '\n', comNO_BLOCK );
-			cByteToSend = comFIRST_BYTE;
+			/* A character was retrieved from the queue so can be sent to the
+			THR now. */
+			USART_SendData(USART1, txByte);
 		}
-
-		vTaskDelay(1000);
+		vTaskDelay(1);
 	}
 } /*lint !e715 !e818 pvParameters is required for a task function even if it is not referenced. */
 /*-----------------------------------------------------------*/
@@ -92,6 +106,7 @@ static portTASK_FUNCTION( vComTxTask, pvParameters )
 static portTASK_FUNCTION( vComRxTask, pvParameters )
 {
 	signed char cByteRxed;
+	const signed char tx_buffer[] = "Terminal:";
 
 	/* Just to stop compiler warnings. */
 	( void ) pvParameters;
@@ -100,14 +115,17 @@ static portTASK_FUNCTION( vComRxTask, pvParameters )
 	{
 			xSerialGetChar( xPort, &cByteRxed, comRX_BLOCK_TIME );
 
-			xSerialPutChar( xPort, cByteRxed, comNO_BLOCK );
+			if(cByteRxed == 13)
+			{
+				vSerialPutString(xPort, tx_buffer, strlen(tx_buffer));
+			}
 	}
 } /*lint !e715 !e818 pvParameters is required for a task function even if it is not referenced. */
 /*-----------------------------------------------------------*/
 
 BaseType_t xAreComTestTasksStillRunning( void )
 {
-BaseType_t xReturn;
+	BaseType_t xReturn;
 
 	/* If the count of successful reception loops has not changed than at
 	some time an error occurred (i.e. a character was received out of sequence)
