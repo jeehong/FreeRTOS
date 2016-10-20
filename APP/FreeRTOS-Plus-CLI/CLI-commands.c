@@ -67,90 +67,56 @@
     1 tab == 4 spaces!
 */
 
-/*
- * Creates all the demo application tasks, then starts the scheduler.  The WEB
- * documentation provides more details of the standard demo application tasks.
- * In addition to the standard demo tasks, the following tasks and tests are
- * defined and/or created within this file:
- *
- * "Fast Interrupt Test" - A high frequency periodic interrupt is generated
- * using a free running timer to demonstrate the use of the
- * configKERNEL_INTERRUPT_PRIORITY configuration constant.  The interrupt
- * service routine measures the number of processor clocks that occur between
- * each interrupt - and in so doing measures the jitter in the interrupt timing.
- * The maximum measured jitter time is latched in the ulMaxJitter variable, and
- * displayed on the LCD by the 'Check' task as described below.  The
- * fast interrupt is configured and handled in the timertest.c source file.
- *
- * "LCD" task - the LCD task is a 'gatekeeper' task.  It is the only task that
- * is permitted to access the display directly.  Other tasks wishing to write a
- * message to the LCD send the message on a queue to the LCD task instead of
- * accessing the LCD themselves.  The LCD task just blocks on the queue waiting
- * for messages - waking and displaying the messages as they arrive.
- *
- * "Check" task -  This only executes every five seconds but has the highest
- * priority so is guaranteed to get processor time.  Its main function is to
- * check that all the standard demo tasks are still operational.  Should any
- * unexpected behaviour within a demo task be discovered the 'check' task will
- * write an error to the LCD (via the LCD task).  If all the demo tasks are
- * executing with their expected behaviour then the check task writes PASS
- * along with the max jitter time to the LCD (again via the LCD task), as
- * described above.
- *
- */
+/* FreeRTOS includes. */
+#include <string.h>
 
-/* Standard includes. */
-#include <stdio.h>
-
-/* Scheduler includes. */
 #include "FreeRTOS.h"
 #include "task.h"
-#include "queue.h"
 
-/* Library includes. */
-#include  <stm32f2xx.h>
-#include "app_led.h"
-#include "serial.h"
-#include "uarttest.h"
+/* FreeRTOS+CLI includes. */
+#include "FreeRTOS_CLI.h"
 
-#include "cli_commands.h"
-#include "cmd_console.h"
 
-/* The check task uses the sprintf function so requires a little more stack. */
-#define mainLED_TASK_STACK_SIZE			( configMINIMAL_STACK_SIZE + 50 )
+static BaseType_t prvHelloCommand( char *pcWriteBuffer, size_t xWriteBufferLen, const char *pcCommandString );
 
-/* The time between cycles of the 'check' task. */
 
-int main( void )
+static const CLI_Command_Definition_t xHelloCommand =
 {
-#ifdef DEBUG
-  debug();
-#endif
+	"hi",
+	"\r\nhi:\r\n Nice to meet you!\r\n",
+	prvHelloCommand,
+	0
+};
+
+
+/*-----------------------------------------------------------*/
+
+void vRegisterCLICommands( void )
+{
+	/* Register all the command line commands defined immediately above. */
+	FreeRTOS_CLIRegisterCommand( &xHelloCommand );
+}
+
+static BaseType_t prvHelloCommand( char *pcWriteBuffer, size_t xWriteBufferLen, const char *pcCommandString )
+{
+	const char *const pcHeader = "Nice to meet you!	\r\n";
 	
-	SystemInit();
-	
-	BSP_LED_Init();
+	/* Remove compile time warnings about unused parameters, and check the
+	write buffer is not NULL.  NOTE - for simplicity, this example assumes the
+	write buffer length is adequate, so does not check for buffer overflows. */
+	( void ) pcCommandString;
+	( void ) xWriteBufferLen;
+	configASSERT( pcWriteBuffer );
 
-	vAltStartComTestTasks( 1, 115200);
-	/* Start the tasks defined within this file/specific to this demo. */
-	xTaskCreate( vLed1Task, "Led1", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
-	/* xTaskCreate( vLed2Task, "Led2", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
-	xTaskCreate( vLed3Task, "Led3", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
-	xTaskCreate( vLed4Task, "Led4", mainLED_TASK_STACK_SIZE, NULL, 3, NULL ); */
-	
-	vUARTCommandConsoleStart( 1000, 3);
+	/* Generate a table of task stats. */
+	strcpy( pcWriteBuffer, pcHeader );
 
-	/* Register commands with the FreeRTOS+CLI command interpreter. */
-	vRegisterCLICommands();
-
-	/* Start the scheduler. */
-	vTaskStartScheduler();
-
-	/* Will only get here if there was not enough heap space to create the
-	idle task. */
-	return 0;
+	/* There is no more data to return after this single string, so return
+	pdFALSE. */
+	return pdFALSE;
 }
 
 
+/*-----------------------------------------------------------*/
 
 

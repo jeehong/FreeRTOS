@@ -361,7 +361,7 @@
               <MiscControls></MiscControls>
               <Define>RVDS_ARMCM3_LM3S102 USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\APP;..\STMLIB\inc;..\FreeRTOS\include</IncludePath>
+              <IncludePath>..\APP;..\STMLIB\inc;..\FreeRTOS\include;..\APP\FreeRTOS-Plus-CLI</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -423,6 +423,21 @@
               <FileName>uarttest.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\APP\uarttest.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_CLI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\FreeRTOS-Plus-CLI\FreeRTOS_CLI.c</FilePath>
+            </File>
+            <File>
+              <FileName>UARTCommandConsole.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\FreeRTOS-Plus-CLI\UARTCommandConsole.c</FilePath>
+            </File>
+            <File>
+              <FileName>CLI-commands.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\FreeRTOS-Plus-CLI\CLI-commands.c</FilePath>
             </File>
           </Files>
         </Group>

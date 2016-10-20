@@ -62,11 +62,11 @@ static volatile UBaseType_t uxRxLoops = comINITIAL_RX_COUNT_VALUE;
 void vAltStartComTestTasks( UBaseType_t uxPriority, uint32_t ulBaudRate)
 {
 	/* Initialise the com port then spawn the Rx and Tx tasks. */
-	xSerialPortInitMinimal( ulBaudRate, comBUFFER_LEN );
+	//xSerialPortInitMinimal( ulBaudRate, comBUFFER_LEN );
 
 	/* The Tx task is spawned with a lower priority than the Rx task. */
 	xTaskCreate( vComTxTask, "COMTx", comSTACK_SIZE, NULL, uxPriority + 1, ( TaskHandle_t * ) NULL ); 
-	xTaskCreate( vComRxTask, "COMRx", comSTACK_SIZE, NULL, uxPriority, ( TaskHandle_t * ) NULL );
+	//xTaskCreate( vComRxTask, "COMRx", comSTACK_SIZE, NULL, uxPriority, ( TaskHandle_t * ) NULL );
 }
 
 void dbg_string(const char *fmt, ...)
