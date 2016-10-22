@@ -111,17 +111,16 @@
 #include  <stm32f2xx.h>
 #include "app_led.h"
 #include "serial.h"
-#include "uarttest.h"
 
-#include "cli_commands.h"
-#include "cmd_console.h"
+#include "app_cli.h"
+#include "uart_console.h"
 
 /* The check task uses the sprintf function so requires a little more stack. */
 #define mainLED_TASK_STACK_SIZE			( configMINIMAL_STACK_SIZE + 50 )
 
 /* The time between cycles of the 'check' task. */
 
-int main( void )
+int main(void)
 {
 #ifdef DEBUG
   debug();
@@ -131,17 +130,13 @@ int main( void )
 	
 	BSP_LED_Init();
 
-	vAltStartComTestTasks( 1, 115200);
+	serial_task_init(1);
+	app_cli_init();
 	/* Start the tasks defined within this file/specific to this demo. */
 	xTaskCreate( vLed1Task, "Led1", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
-	/* xTaskCreate( vLed2Task, "Led2", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
+	xTaskCreate( vLed2Task, "Led2", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
 	xTaskCreate( vLed3Task, "Led3", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
-	xTaskCreate( vLed4Task, "Led4", mainLED_TASK_STACK_SIZE, NULL, 3, NULL ); */
-	
-	vUARTCommandConsoleStart( 1000, 3);
-
-	/* Register commands with the FreeRTOS+CLI command interpreter. */
-	vRegisterCLICommands();
+	xTaskCreate( vLed4Task, "Led4", mainLED_TASK_STACK_SIZE, NULL, 3, NULL );
 
 	/* Start the scheduler. */
 	vTaskStartScheduler();

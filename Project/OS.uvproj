@@ -48,7 +48,7 @@
           <OutputName>OS</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\</ListingPath>
@@ -361,7 +361,7 @@
               <MiscControls></MiscControls>
               <Define>RVDS_ARMCM3_LM3S102 USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\APP;..\STMLIB\inc;..\FreeRTOS\include;..\APP\FreeRTOS-Plus-CLI</IncludePath>
+              <IncludePath>..\APP;..\STMLIB\inc;..\FreeRTOS\include;..\APP\cli;..\BSP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -420,24 +420,19 @@
               <FilePath>..\APP\app_led.c</FilePath>
             </File>
             <File>
-              <FileName>uarttest.c</FileName>
+              <FileName>app_cli.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\APP\uarttest.c</FilePath>
+              <FilePath>..\APP\cli\app_cli.c</FilePath>
             </File>
             <File>
-              <FileName>FreeRTOS_CLI.c</FileName>
+              <FileName>mid_cli.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\APP\FreeRTOS-Plus-CLI\FreeRTOS_CLI.c</FilePath>
+              <FilePath>..\APP\cli\mid_cli.c</FilePath>
             </File>
             <File>
-              <FileName>UARTCommandConsole.c</FileName>
+              <FileName>hal_cli.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\APP\FreeRTOS-Plus-CLI\UARTCommandConsole.c</FilePath>
-            </File>
-            <File>
-              <FileName>CLI-commands.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\APP\FreeRTOS-Plus-CLI\CLI-commands.c</FilePath>
+              <FilePath>..\APP\cli\hal_cli.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -478,6 +473,16 @@
               <FileName>stm32f2xx_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\STMLIB\src\stm32f2xx_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f2xx_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STMLIB\src\stm32f2xx_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f2xx_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STMLIB\src\stm32f2xx_dma.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -523,6 +528,16 @@
               <FileName>heap_2.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\portable\MemMang\heap_2.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\bsp_i2c.c</FilePath>
             </File>
           </Files>
         </Group>
