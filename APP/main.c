@@ -113,7 +113,6 @@
 #include "serial.h"
 
 #include "app_cli.h"
-#include "uart_console.h"
 
 /* The check task uses the sprintf function so requires a little more stack. */
 #define mainLED_TASK_STACK_SIZE			( configMINIMAL_STACK_SIZE + 50 )

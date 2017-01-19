@@ -69,8 +69,8 @@ signed portBASE_TYPE xSerialGetChar(xComPortHandle pxPort, signed char *prx_char
 signed portBASE_TYPE xSerialPutChar(xComPortHandle pxPort, signed char cOutChar, TickType_t xBlockTime);
 portBASE_TYPE xSerialWaitForSemaphore(xComPortHandle xPort);
 void vSerialClose(xComPortHandle xPort);
-unsigned short app_cli_data_tx(signed char *data, unsigned short len);
-unsigned short app_cli_data_rx(signed char *data, unsigned short len);
+unsigned short serial_tx(signed char *data, unsigned short len);
+unsigned short serial_rx(signed char *data, unsigned short len);
 void dbg_string(const char *fmt, ...);
 
 #endif

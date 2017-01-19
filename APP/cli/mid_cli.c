@@ -47,7 +47,7 @@ available. */
  * Return the number of parameters that follow the command name.
  */
 static int8_t get_num_of_parame(const char *commandString);
-static BaseType_t help_handle(char *dest, size_t len, const char * const help_info);
+static BaseType_t help_handle(const char * const input, char *dest, size_t len, const char * const help_info);
 static unsigned char permission = 0;
 
 /* The definition of the "help" command.  This command is always at the front
@@ -173,9 +173,9 @@ void mid_cli_init(unsigned short usStackSize, UBaseType_t uxPriority)
 static void mid_cli_console_task(void *parame)
 {
 	signed char rx_char;
-	unsigned char ucInputIndex = 0;
+	unsigned char in_index = 0;
 	char *pcOutputString;
-	static char cInputString[cmdMAX_INPUT_SIZE], cLastInputString[cmdMAX_INPUT_SIZE];
+	char in_sring[cmdMAX_INPUT_SIZE];
 	BaseType_t xReturned;
 
 	(void)parame;
@@ -192,7 +192,7 @@ static void mid_cli_console_task(void *parame)
 		/* Wait for the next character.  The while loop is used in case
 		INCLUDE_vTaskSuspend is not set to 1 - in which case portMAX_DELAY will
 		be a genuine block time rather than an infinite block time. */
-		while(xSerialGetChar(0, &rx_char, portMAX_DELAY) != pdPASS);
+		while(serial_rx(&rx_char, 1) != pdPASS) ;
 
 		/* Ensure exclusive access to the UART Tx. */
 		if(xSemaphoreTake(xTxMutex, cmdMAX_MUTEX_WAIT ) == pdPASS)
@@ -204,19 +204,11 @@ static void mid_cli_console_task(void *parame)
 			/* Was it the end of the line? */
 			if(rx_char == '\n' || rx_char == '\r')
 			{
-				/* See if the command is empty, indicating that the last command
-				is to be executed again. */
-				if(ucInputIndex == 0)
-				{
-					/* Copy the last command back into the input string. */
-					strcpy(cInputString, cLastInputString);
-				}
-
 				/* Just to space the output from the input. */
 				hal_cli_data_tx((signed char *)pcNewLine, strlen(pcNewLine));
 				if(!permission)
 				{
-					if(strcmp(passwd, cInputString))
+					if(strcmp(passwd, in_sring))
 						hal_cli_data_tx((signed char *)input_passwd_msg, strlen(input_passwd_msg));
 					else
 					{
@@ -233,11 +225,10 @@ static void mid_cli_console_task(void *parame)
 				do
 				{
 					/* Get the next output string from the command interpreter. */
-					xReturned = mid_cli_parse_command(cInputString, pcOutputString, CLI_STRING_MAX_OUTPUT_SIZE);
+					xReturned = mid_cli_parse_command(pcOutputString, in_sring, CLI_STRING_MAX_OUTPUT_SIZE);
 
 					/* Write the generated string to the UART. */
 					hal_cli_data_tx((signed char *)pcOutputString, strlen(pcOutputString));
-
 				} while(xReturned != pdFALSE);
 				exit_correct:
 				hal_cli_data_tx((signed char *)pcEndOfOutputMessage, strlen(pcEndOfOutputMessage));
@@ -246,8 +237,8 @@ static void mid_cli_console_task(void *parame)
 				sent.  Clear the input string ready to receive the next command.
 				Remember the command that was just processed first in case it is
 				to be processed again. */
-				ucInputIndex = 0;
-				memset(cInputString, 0x00, cmdMAX_INPUT_SIZE);
+				in_index = 0;
+				memset(in_sring, 0x00, cmdMAX_INPUT_SIZE);
 			}
 			else
 			{
@@ -255,14 +246,14 @@ static void mid_cli_console_task(void *parame)
 				{
 					/* Ignore the character. */
 				}
-				else if((rx_char == '\b') || (rx_char == cmdASCII_DEL))
+				else if((rx_char == '\b') || (rx_char == cmdASCII_DEL))		/* Backspace || Delete */
 				{
 					/* Backspace was pressed.  Erase the last character in the
 					string - if any. */
-					if(ucInputIndex > 0)
+					if(in_index > 0)
 					{
-						ucInputIndex--;
-						cInputString[ ucInputIndex ] = '\0';
+						in_index--;
+						in_sring[in_index] = '\0';
 					}
 				}
 				else
@@ -272,10 +263,10 @@ static void mid_cli_console_task(void *parame)
 					passed to the command interpreter. */
 					if((rx_char >= ' ') && (rx_char <= '~'))
 					{
-						if( ucInputIndex < cmdMAX_INPUT_SIZE)
+						if(in_index < cmdMAX_INPUT_SIZE)
 						{
-							cInputString[ucInputIndex] = rx_char;
-							ucInputIndex++;
+							in_sring[in_index] = rx_char;
+							in_index++;
 						}
 					}
 				}
@@ -287,7 +278,7 @@ static void mid_cli_console_task(void *parame)
 	}
 }
 
-BaseType_t mid_cli_parse_command(const char * const input, char *dest, size_t len)
+BaseType_t mid_cli_parse_command(char *dest, const char * const input, size_t len)
 {
 	static const struct cli_module_list_t *cmd = NULL;
 	BaseType_t xReturn = pdTRUE;
@@ -298,7 +289,7 @@ BaseType_t mid_cli_parse_command(const char * const input, char *dest, size_t le
 	/* Note:  This function is not re-entrant.  It must not be called from more
 	thank one task. */
 
-	if(cmd == NULL )
+	if(cmd == NULL)
 	{
 		/* Search for the command string in the list of registered commands. */
 		for(cmd = &cmd_list_head; cmd != NULL; cmd = cmd->next)
@@ -339,7 +330,7 @@ BaseType_t mid_cli_parse_command(const char * const input, char *dest, size_t le
 	{
 		memset(dest, '\0', sizeof(char) * CLI_STRING_MAX_OUTPUT_SIZE);
 		/* Call the callback function that is registered to this command. */
-		xReturn = cmd->module->handle(dest, len, cmd->module->help_info);
+		xReturn = cmd->module->handle(input, dest, len, cmd->module->help_info);
 
 		/* If xReturn is pdFALSE, then no further strings will be returned
 		after this one, and	cmd can be reset to NULL ready to search
@@ -465,7 +456,7 @@ static int8_t get_num_of_parame(const char *commandString)
 	return cParameters;
 }
 
-static BaseType_t help_handle(char *dest, size_t len, const char * const help_info)
+static BaseType_t help_handle(const char * const input, char *dest, size_t len, const char * const help_info)
 {
 	struct cli_module_list_t *cmd_index = NULL;
 	

@@ -48,7 +48,7 @@ commands must comply.  dest is a buffer into which the output from
 executing the command can be written, len is the length, in bytes of
 the dest buffer, and commandString is the entire string as input by
 the user (from which parameters can be extracted).*/
-typedef BaseType_t (*module_func_handle)( char *dest, size_t len, const char *help_info);
+typedef BaseType_t (*module_func_handle)(const char * const /*input*/, char * /*dest*/, size_t /*len*/, const char * /*help_info*/);
 
 /* The structure that defines command line commands.  A command line command
 should be defined by declaring a const structure of this type. */
@@ -86,7 +86,7 @@ BaseType_t mid_cli_module_unregister(const struct cli_module_t *const p);
  * pcCmdIntProcessCommand is not reentrant.  It must not be called from more
  * than one task - or at least - by more than one task at a time.
  */
-BaseType_t mid_cli_parse_command(const char * const commandInput, char * dest, size_t len);
+BaseType_t mid_cli_parse_command(char * dest, const char * const commandInput, size_t len);
 
 /*-----------------------------------------------------------*/
 

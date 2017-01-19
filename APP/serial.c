@@ -93,15 +93,15 @@ static portTASK_FUNCTION(dataLinktask, pvParameters)
 
 	for( ;; )
 	{
-			xSerialGetChar(xPort, &cByteRxed, comRX_BLOCK_TIME);
+		xSerialGetChar(xPort, &cByteRxed, comRX_BLOCK_TIME);
 
-			if(xQueueReceive(ser_tx_queue, &txByte, 0) == pdTRUE)
-			{
-				/* A character was retrieved from the queue so can be sent to the
-				THR now. */
-				USART_SendData(USART1, txByte);
-			}
-			vTaskDelay(1);
+		if(xQueueReceive(ser_tx_queue, &txByte, 0) == pdTRUE)
+		{
+			/* A character was retrieved from the queue so can be sent to the
+			THR now. */
+			USART_SendData(USART1, txByte);
+		}
+		vTaskDelay(1);
 	}
 } /*lint !e715 !e818 pvParameters is required for a task function even if it is not referenced. */
 
@@ -218,15 +218,18 @@ void vSerialPutString(xComPortHandle pxPort, signed char const  *pcString, unsig
 }
 /*-----------------------------------------------------------*/
 
-unsigned short app_cli_data_tx(signed char *data, unsigned short len)
+unsigned short serial_tx(signed char *data, unsigned short len)
 {
 	vSerialPutString(xPort, data, len);
 	return 0;
 }
 
-unsigned short app_cli_data_rx(signed char *data, unsigned short len)
+unsigned short serial_rx(signed char *data, unsigned short len)
 {
-	return 0;
+	if(xQueueReceive(ser_rx_queue, data, portMAX_DELAY))
+		return pdTRUE;
+	else
+		return pdFALSE;
 }
 
 
@@ -272,7 +275,7 @@ void USART1_IRQHandler( void )
                 ;
 		}
 		USART_ClearITPendingBit(USART1, USART_IT_TXE);
-		USART_ITConfig(USART1, USART_IT_TXE, DISABLE);			
+		USART_ITConfig(USART1, USART_IT_TXE, DISABLE);
 	}	
     
 	if( USART_GetITStatus( USART1, USART_IT_RXNE ) == SET )
