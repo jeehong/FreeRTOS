@@ -40,7 +40,7 @@ void vLed1Task( void *pvParameters )
   	while(1)
 	{
 		GPIO_SetBits(GPIOA, GPIO_Pin_12);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(900));	
+		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(1900));	
 		GPIO_ResetBits(GPIOA, GPIO_Pin_12);
 		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(100));	
 	}
@@ -54,9 +54,9 @@ void vLed2Task( void *pvParameters )
   	while(1)
 	{
 		GPIO_SetBits(GPIOA, GPIO_Pin_11);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(500));	
+		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(1900));	
 		GPIO_ResetBits(GPIOA, GPIO_Pin_11);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(500));	
+		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(100));	
 	}
 }
 
@@ -68,9 +68,9 @@ void vLed3Task( void *pvParameters )
   	while(1)
 	{
 		GPIO_ResetBits(GPIOB, GPIO_Pin_0);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(500));
+		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(1900));
 		GPIO_SetBits(GPIOB, GPIO_Pin_0);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(500));
+		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(100));
 	}
 }
 
@@ -82,9 +82,9 @@ void vLed4Task( void *pvParameters )
   	while(1)
 	{
 		GPIO_SetBits(GPIOB, GPIO_Pin_1);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(100));
+		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(500));
 		GPIO_ResetBits(GPIOB, GPIO_Pin_1);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(900));
+		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(500));
 	}
 }
 

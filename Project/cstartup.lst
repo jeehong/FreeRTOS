@@ -841,16 +841,19 @@ ARM Macro Assembler    Page 13
   424 00000018         
   425 00000018                 END
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\obj\cs
-tartup.d -o.\obj\cstartup.o -Ie:\Keil_v5\ARM\RV31\INC -Ie:\Keil_v5\ARM\PACK\ARM
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\obj\cstartup.d -o.\obj\cstartup.o -I.\RTE\_FreeRTOS -Ie:\Keil_v5
 
 
 
 ARM Macro Assembler    Page 14 
 
 
-\CMSIS\3.20.4\CMSIS\Include -Ie:\Keil_v5\ARM\Inc\ST\STM32F2xx --predefine="__MI
-CROLIB SETA 1" --list=.\cstartup.lst ..\STMLIB\startup\cstartup.s
+26\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include -Ie:\Keil_v526\ARM\PACK\Keil\STM32F2x
+x_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F2xx\Include --predefine="__EVAL SETA 
+1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 526" --p
+redefine="_RTE_ SETA 1" --predefine="STM32F205xx SETA 1" --list=.\cstartup.lst 
+..\STMLIB\startup\cstartup.s
 
 
 
@@ -1948,4 +1951,4 @@ Symbol: xPortSysTickHandler
       At line 85 in file ..\STMLIB\startup\cstartup.s
 Comment: xPortSysTickHandler used once
 4 symbols
-443 symbols in table
+447 symbols in table

@@ -2,87 +2,59 @@
 <body>
 <pre>
 <h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.26.0.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a Jeehong, Microsoft, LIC=ZIVAR-KTSQR-M9KGD-8R39Z-KGD9T-I1730
+ 
+Tool Versions:
+Toolchain:       DK-ARM Developers Kit  Version: 5.26.0.0
+Toolchain Path:  e:\Keil_v526\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.26.0.0
+Dialog DLL:      DCM.DLL V1.17.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.29.0
+Dialog DLL:      TCM.DLL V1.35.3.0
+ 
 <h2>Project:</h2>
-C:\Users\Jeehong\projects\FreeRTOS\software\Project\OS.uvproj
-Project File Date:  01/19/2017
+F:\projects\FreeRTOS\software\Project\OS.uvprojx
+Project File Date:  08/09/2018
 
 <h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'e:\Keil_v526\ARM\ARMCC\Bin'
 Build target 'FreeRTOS'
-compiling app_cli.c...
+compiling app_led.c...
 linking...
-Program Size: Code=17300 RO-data=920 RW-data=200 ZI-data=19144  
+Program Size: Code=18036 RO-data=920 RW-data=200 ZI-data=18888  
 FromELF: creating hex file...
 ".\Obj\OS.axf" - 0 Error(s), 0 Warning(s).
-Load "C:\\Users\\Jeehong\\projects\\FreeRTOS\\software\\Project\\Obj\\OS.axf" 
-Set JLink Project File to "C:\Users\Jeehong\projects\FreeRTOS\software\Project\JLinkSettings.ini"
-* JLink Info: Device "STM32F205RG" selected (1024 KB flash, 128 KB RAM).
- 
-JLink info:
-------------
-DLL: V4.80g, compiled Feb 13 2014 20:50:02
-Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
-Hardware: V8.00
-S/N : 20080643 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: STM32F205RG
-VTarget = 3.338V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 0, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 2000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Application running ...
-tifier "wday" is undefined
-        result = sscanf(pcCommandInput, "%s %d %d %d %d %d %d %d", string, &year, &mon, &mday, &wday, &hour, &min, &sec);
-..\APP\cli\app_cli.c(66): error:  #20: identifier "hour" is undefined
-        result = sscanf(pcCommandInput, "%s %d %d %d %d %d %d %d", string, &year, &mon, &mday, &wday, &hour, &min, &sec);
-..\APP\cli\app_cli.c(66): error:  #20: identifier "min" is undefined
-        result = sscanf(pcCommandInput, "%s %d %d %d %d %d %d %d", string, &year, &mon, &mday, &wday, &hour, &min, &sec);
-..\APP\cli\app_cli.c(66): error:  #20: identifier "sec" is undefined
-        result = sscanf(pcCommandInput, "%s %d %d %d %d %d %d %d", string, &year, &mon, &mday, &wday, &hour, &min, &sec);
-..\APP\cli\app_cli.c(67): error:  #20: identifier "tm" is undefined
-        tm.year = year;
-..\APP\cli\app_cli.c(74): warning:  #223-D: function "rtc_valid_tm" declared implicitly
-        if((result == 8) && !rtc_valid_tm(&tm))
-..\APP\cli\app_cli.c(76): warning:  #223-D: function "app_ds3231_set_time" declared implicitly
-                app_ds3231_set_time(&tm);
-..\APP\cli\app_cli.c(77): error:  #70: incomplete type is not allowed
-                memset(&tm, 0, sizeof(struct rtc_time));
-..\APP\cli\app_cli.c(78): warning:  #223-D: function "app_ds3231_read_time" declared implicitly
-                app_ds3231_read_time(&tm);
-..\APP\cli\app_cli.c(80): error:  #20: identifier "pcWriteBuffer" is undefined
-                sprintf(pcWriteBuffer, "    Set time success,current: 20%d-%d-%d %d %d:%d:%d\r\n", 
-..\APP\cli\app_cli.c(91): error:  #20: identifier "pcWriteBuffer" is undefined
-                strcpy(pcWriteBuffer, " Format incorrect,please try again!\r\n");
-..\APP\cli\app_cli.c(100): warning:  #111-D: statement is unreachable
-        return 0;
-..\APP\cli\app_cli.c(61): warning:  #177-D: variable "mod_name" was declared but never referenced
-        char mod_name[20];
-..\APP\cli\app_cli.c(109): error:  #147-D: declaration is incompatible with "BaseType_t hi_handle(const char *const, char *, size_t, const char *const)" (declared at line 15)
-  static BaseType_t hi_handle( char *dest, size_t len, const char * const help_info)
-..\APP\cli\app_cli.c(35): warning:  #177-D: variable "hi" was declared but never referenced
-  static const struct cli_module_t hi =
-..\APP\cli\app_cli.c(43): warning:  #177-D: variable "info" was declared but never referenced
-  static const struct cli_module_t info =
-..\APP\cli\app_cli.c(51): warning:  #177-D: variable "clear" was declared but never referenced
-  static const struct cli_module_t clear =
-..\APP\cli\app_cli.c: 8 warnings, 15 errors
-compiling mid_cli.c...
-".\Obj\OS.axf" - 15 Error(s), 8 Warning(s).
-Target not created
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.3.0.pack
+                ARM.CMSIS.5.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F2xx_DFP.2.9.0.pack
+                Keil.STM32F2xx_DFP.2.9.0
+                STMicroelectronics STM32F2 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_FreeRTOS
+  e:\Keil_v526\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include
+  e:\Keil_v526\ARM\PACK\Keil\STM32F2xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F2xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.1
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
