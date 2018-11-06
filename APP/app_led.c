@@ -6,6 +6,8 @@
 
 #include "app_led.h"
 
+static unsigned char byte  = 0;
+
 void  BSP_LED_Init(void)
 {
     GPIO_InitTypeDef  GPIO_InitStructure;
@@ -32,6 +34,27 @@ void  BSP_LED_Init(void)
 	GPIO_SetBits(GPIOB, GPIO_Pin_1);
 }
 
+void vByteTask( void *pvParameters )
+{
+	portTickType xLastWakeTime;
+
+	byte = 0;
+
+	xLastWakeTime = xTaskGetTickCount();
+  	while(1)
+	{
+		if(byte > 15)
+		{
+			byte = 1;
+		}
+		else
+		{
+			byte ++;
+		}
+		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(500));
+	}	
+}
+
 void vLed1Task( void *pvParameters )
 {
 	portTickType xLastWakeTime;
@@ -39,9 +62,14 @@ void vLed1Task( void *pvParameters )
 	xLastWakeTime = xTaskGetTickCount();
   	while(1)
 	{
-		GPIO_SetBits(GPIOA, GPIO_Pin_12);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(1900));	
-		GPIO_ResetBits(GPIOA, GPIO_Pin_12);
+		if(byte & 0x1)
+		{
+			GPIO_ResetBits(GPIOA, GPIO_Pin_12);
+		}
+		else
+		{
+			GPIO_SetBits(GPIOA, GPIO_Pin_12);
+		}
 		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(100));	
 	}
 }
@@ -53,9 +81,14 @@ void vLed2Task( void *pvParameters )
 	xLastWakeTime = xTaskGetTickCount();
   	while(1)
 	{
-		GPIO_SetBits(GPIOA, GPIO_Pin_11);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(1900));	
-		GPIO_ResetBits(GPIOA, GPIO_Pin_11);
+		if(byte & 0x2)
+		{
+			GPIO_ResetBits(GPIOA, GPIO_Pin_11);
+		}
+		else
+		{
+			GPIO_SetBits(GPIOA, GPIO_Pin_11);
+		}
 		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(100));	
 	}
 }
@@ -67,10 +100,15 @@ void vLed3Task( void *pvParameters )
 	xLastWakeTime = xTaskGetTickCount();
   	while(1)
 	{
-		GPIO_ResetBits(GPIOB, GPIO_Pin_0);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(1900));
-		GPIO_SetBits(GPIOB, GPIO_Pin_0);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(100));
+		if(byte & 0x4)
+		{
+			GPIO_SetBits(GPIOB, GPIO_Pin_0);
+		}
+		else
+		{
+			GPIO_ResetBits(GPIOB, GPIO_Pin_0);
+		}
+		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(100));	
 	}
 }
 
@@ -81,10 +119,15 @@ void vLed4Task( void *pvParameters )
 	xLastWakeTime = xTaskGetTickCount();
   	while(1)
 	{
-		GPIO_SetBits(GPIOB, GPIO_Pin_1);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(500));
-		GPIO_ResetBits(GPIOB, GPIO_Pin_1);
-		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(500));
+		if(byte & 0x8)
+		{
+			GPIO_ResetBits(GPIOB, GPIO_Pin_1);
+		}
+		else
+		{
+			GPIO_SetBits(GPIOB, GPIO_Pin_1);
+		}
+		vTaskDelayUntil(&xLastWakeTime, mainDELAY_MS(100));	
 	}
 }
 

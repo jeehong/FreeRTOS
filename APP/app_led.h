@@ -8,6 +8,7 @@ void vLed1Task( void *pvParameters );
 void vLed2Task( void *pvParameters );
 void vLed3Task( void *pvParameters );
 void vLed4Task( void *pvParameters );
-	 
+void vByteTask( void *pvParameters );
+
 
 #endif

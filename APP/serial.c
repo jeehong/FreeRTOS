@@ -218,13 +218,13 @@ void vSerialPutString(xComPortHandle pxPort, signed char const  *pcString, unsig
 }
 /*-----------------------------------------------------------*/
 
-unsigned short serial_tx(signed char *data, unsigned short len)
+unsigned short serial_tx(char *data, unsigned int len)
 {
-	vSerialPutString(xPort, data, len);
+	vSerialPutString(xPort, (signed char *)data, len);
 	return 0;
 }
 
-unsigned short serial_rx(signed char *data, unsigned short len)
+unsigned short serial_rx(char *data, unsigned int len)
 {
 	if(xQueueReceive(ser_rx_queue, data, portMAX_DELAY))
 		return pdTRUE;

@@ -9,12 +9,12 @@ void hal_cli_data_switch_register(data_switch tx, data_switch rx)
 	rx_data = rx;
 }
 
-unsigned short hal_cli_data_tx(signed char *data, unsigned short len)
+unsigned short hal_cli_data_tx(char *data, unsigned int len)
 {
 	return tx_data(data, len);
 }
 
-unsigned short hal_cli_data_rx(signed char *data, unsigned short len)
+unsigned short hal_cli_data_rx(char *data, unsigned int len)
 {
 	return rx_data(data, len);
 }

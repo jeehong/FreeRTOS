@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>RVDS_ARMCM3_LM3S102 USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\APP;..\STMLIB\inc;..\FreeRTOS\include;..\APP\cli;..\BSP</IncludePath>
+              <IncludePath>..\APP;..\STMLIB\inc;..\FreeRTOS\include;..\APP\cli;..\DRV;..\LIB</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -415,7 +415,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>LIB</GroupName>
+          <GroupName>STLIB</GroupName>
           <Files>
             <File>
               <FileName>misc.c</FileName>
@@ -510,12 +510,42 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>BSP</GroupName>
+          <GroupName>DRV</GroupName>
           <Files>
             <File>
-              <FileName>bsp_i2c.c</FileName>
+              <FileName>vfs_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\bsp_i2c.c</FilePath>
+              <FilePath>..\DRV\vfs_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_bus.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\DRV\i2c_bus.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LIB</GroupName>
+          <Files>
+            <File>
+              <FileName>vfs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LIB\vfs.c</FilePath>
+            </File>
+            <File>
+              <FileName>vfs_file.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LIB\vfs_file.c</FilePath>
+            </File>
+            <File>
+              <FileName>vfs_inode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LIB\vfs_inode.c</FilePath>
+            </File>
+            <File>
+              <FileName>vfs_register.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LIB\vfs_register.c</FilePath>
             </File>
           </Files>
         </Group>
