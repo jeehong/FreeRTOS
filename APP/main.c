@@ -14,9 +14,7 @@
 #include "app_cli.h"
 
 /* vfs */
-#include "types.h"
 #include "vfs.h"
-#include "vfs_inode.h"
 #include "vfs_register.h"
 #include "vfs_err.h"
 #include "vfs_i2c.h"
@@ -57,11 +55,11 @@ int main(void)
 	serial_task_init(1);
 	app_cli_init();
 
-	fd_i2c = aos_open(i2c_path, 0);
+	fd_i2c = vfs_open(i2c_path, 0);
 	
-	aos_write(fd_i2c, &write_buf, sizeof(read_buf));
-	aos_read(fd_i2c, &read_buf, sizeof(read_buf));
-	aos_close(fd_i2c);
+	vfs_write(fd_i2c, &write_buf, sizeof(read_buf));
+	vfs_read(fd_i2c, &read_buf, sizeof(read_buf));
+	vfs_close(fd_i2c);
 
 	/* Start the tasks defined within this file/specific to this demo. */
 	xTaskCreate( vByteTask, "Byte", mainLED_TASK_STACK_SIZE, NULL, 4, NULL );

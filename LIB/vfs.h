@@ -1,28 +1,21 @@
-/*
- * Copyright (C) 2015-2017 Alibaba Group Holding Limited
- */
-
-#ifndef AOS_VFS_H
-#define AOS_VFS_H
+#ifndef __VFS_H__
+#define __VFS_H__
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #include "types.h"
-#include <vfs_conf.h>
 
 int vfs_init(void);
 
-int vfs_device_init(void);
+int vfs_open(const char *path, int flags);
 
-int aos_open(const char *path, int flags);
+ssize_t vfs_read(int fd, void *buf, size_t nbytes);
 
-ssize_t aos_read(int fd, void *buf, size_t nbytes);
+ssize_t vfs_write(int fd, const void *buf, size_t nbytes);
 
-ssize_t aos_write(int fd, const void *buf, size_t nbytes);
-
-int aos_close(int fd);
+int vfs_close(int fd);
 
 #ifdef __cplusplus
 }

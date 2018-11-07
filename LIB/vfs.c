@@ -1,7 +1,3 @@
-/*
- * Copyright (C) 2015-2017 Alibaba Group Holding Limited
- */
-
 #include <vfs_conf.h>
 #include <vfs_err.h>
 #include <vfs_inode.h>
@@ -10,18 +6,13 @@
 #include <limits.h>
 #include <string.h>
 #include <vfs_file.h>
-#include <vfs_machine.h>
 
 #ifdef IO_NEED_TRAP
 #include <vfs_trap.h>
 #endif
 
-#ifndef PATH_MAX
-#define PATH_MAX 256
-#endif
-
 static uint8_t g_vfs_init;
-aos_mutex_t g_vfs_mutex;
+vfs_port_mutex_t g_vfs_mutex;
 
 int vfs_init(void)
 {
@@ -30,7 +21,7 @@ int vfs_init(void)
     if (g_vfs_init == 1) {
         return ret;
     }
-	aos_mutex_new(g_vfs_mutex, ret);
+	vfs_port_mutex_new(g_vfs_mutex, ret);
     if (ret != VFS_SUCCESS) {
         return ret;
     }
@@ -42,7 +33,7 @@ int vfs_init(void)
     return ret;
 }
 
-int aos_open(const char *path, int flags)
+int vfs_open(const char *path, int flags)
 {
     file_t  *file;
     inode_t *node;
@@ -54,10 +45,10 @@ int aos_open(const char *path, int flags)
     }
 
     len = strlen(path);
-    if (len > PATH_MAX) {
+    if (len > VFS_CONFIG_FILE_NAME_MAX_CHARS) {
         return -ENAMETOOLONG;
     }
-	aos_mutex_lock(g_vfs_mutex, AOS_WAIT_FOREVER, ret);
+	vfs_port_mutex_lock(g_vfs_mutex, VFS_CONFIG_WAIT_FOREVER, ret);
     if (ret != VFS_SUCCESS) {
         return ret;
     }
@@ -65,7 +56,7 @@ int aos_open(const char *path, int flags)
     node = inode_open(path);
 
     if (node == NULL) {
-        aos_mutex_unlock(g_vfs_mutex, ret);
+        vfs_port_mutex_unlock(g_vfs_mutex, ret);
 
         #ifdef IO_NEED_TRAP
             return trap_open(path, flags);
@@ -77,7 +68,7 @@ int aos_open(const char *path, int flags)
     node->i_flags = flags;
     file = new_file(node);
 
-    aos_mutex_unlock(g_vfs_mutex, ret);
+    vfs_port_mutex_unlock(g_vfs_mutex, ret);
 
     if (file == NULL) {
         return -ENFILE;
@@ -102,7 +93,7 @@ int aos_open(const char *path, int flags)
     return get_fd(file);
 }
 
-int aos_close(int fd)
+int vfs_close(int fd)
 {
     int ret = VFS_SUCCESS;
     file_t  *f;
@@ -132,19 +123,19 @@ int aos_close(int fd)
         }
     }
 
-	aos_mutex_lock(g_vfs_mutex, AOS_WAIT_FOREVER, ret);
+	vfs_port_mutex_lock(g_vfs_mutex, VFS_CONFIG_WAIT_FOREVER, ret);
     if (ret != VFS_SUCCESS) {
         return ret;
     }
 
     del_file(f);
 
-    aos_mutex_unlock(g_vfs_mutex, ret);
+    vfs_port_mutex_unlock(g_vfs_mutex, ret);
 
     return ret;
 }
 
-ssize_t aos_read(int fd, void *buf, size_t nbytes)
+ssize_t vfs_read(int fd, void *buf, size_t nbytes)
 {
     ssize_t  nread = -1;
     file_t  *f;
@@ -175,7 +166,7 @@ ssize_t aos_read(int fd, void *buf, size_t nbytes)
     return nread;
 }
 
-ssize_t aos_write(int fd, const void *buf, size_t nbytes)
+ssize_t vfs_write(int fd, const void *buf, size_t nbytes)
 {
     ssize_t  nwrite = -1;
     file_t  *f;

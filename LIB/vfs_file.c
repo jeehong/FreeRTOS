@@ -1,13 +1,9 @@
-/*
- * Copyright (C) 2015-2017 Alibaba Group Holding Limited
- */
-
 #include <vfs_conf.h>
 #include <vfs_err.h>
 #include <vfs_inode.h>
 #include <stdio.h>
 
-#define MAX_FILE_NUM (AOS_CONFIG_VFS_DEV_NODES * 2)
+#define MAX_FILE_NUM (VFS_CONFIG_DEV_NODES * 2)
 static file_t files[MAX_FILE_NUM];
 
 file_t *new_file(inode_t *node)
@@ -41,14 +37,14 @@ void del_file(file_t *file)
 
 int get_fd(file_t *file)
 {
-    return (file - files) + AOS_CONFIG_VFS_FD_OFFSET;
+    return (file - files) + VFS_CONFIG_FD_OFFSET;
 }
 
 file_t *get_file(int fd)
 {
     file_t *f;
 
-    fd -= AOS_CONFIG_VFS_FD_OFFSET;
+    fd -= VFS_CONFIG_FD_OFFSET;
 
     if (fd < 0) {
         return NULL;

@@ -1,29 +1,24 @@
-/*
- * Copyright (C) 2015-2017 Alibaba Group Holding Limited
- */
-
 #include <string.h>
 #include <vfs_conf.h>
 #include <vfs_err.h>
 #include <vfs_inode.h>
-#include <vfs_machine.h>
 #include <types.h>
 
 #define VFS_NULL_PARA_CHK(para)     do { if (!(para)) return -EINVAL; } while(0)
 
-static inode_t g_vfs_dev_nodes[AOS_CONFIG_VFS_DEV_NODES];
+static inode_t g_vfs_dev_nodes[VFS_CONFIG_DEV_NODES];
 
-int inode_init()
+int inode_init(void)
 {
-    memset(g_vfs_dev_nodes, 0, sizeof(inode_t) * AOS_CONFIG_VFS_DEV_NODES);
+    memset(g_vfs_dev_nodes, 0, sizeof(inode_t) * VFS_CONFIG_DEV_NODES);
     return 0;
 }
 
-int inode_alloc()
+int inode_alloc(void)
 {
     int e = 0;
 
-    for (; e < AOS_CONFIG_VFS_DEV_NODES; e++) {
+    for (; e < VFS_CONFIG_DEV_NODES; e++) {
         if (g_vfs_dev_nodes[e].type == VFS_TYPE_NOT_INIT) {
             return e;
         }
@@ -39,11 +34,7 @@ int inode_del(inode_t *node)
     }
 
     if (node->refs == 0) {
-        if (node->i_name != NULL) {
-            aos_free(node->i_name);
-        }
-
-        node->i_name = NULL;
+        node->i_name[0] = '\0';
         node->i_arg = NULL;
         node->i_flags = 0;
         node->type = VFS_TYPE_NOT_INIT;
@@ -57,12 +48,9 @@ inode_t *inode_open(const char *path)
     int e = 0;
     inode_t *node;
 
-    for (; e < AOS_CONFIG_VFS_DEV_NODES; e++) {
+    for (; e < VFS_CONFIG_DEV_NODES; e++) {
         node = &g_vfs_dev_nodes[e];
         if (node == NULL) {
-            continue;
-        }
-        if (node->i_name == NULL) {
             continue;
         }
         if (INODE_IS_TYPE(node, VFS_TYPE_FS_DEV)) {
@@ -81,7 +69,7 @@ inode_t *inode_open(const char *path)
 
 int inode_ptr_get(int fd, inode_t **node)
 {
-    if (fd < 0 || fd >= AOS_CONFIG_VFS_DEV_NODES) {
+    if (fd < 0 || fd >= VFS_CONFIG_DEV_NODES) {
         return -EINVAL;
     }
 
@@ -112,7 +100,7 @@ int inode_avail_count(void)
     int count = 0;
     int e = 0;
 
-    for (; e < AOS_CONFIG_VFS_DEV_NODES; e++) {
+    for (; e < VFS_CONFIG_DEV_NODES; e++) {
         if (g_vfs_dev_nodes[count].type == VFS_TYPE_NOT_INIT) {
             count++;
         }
@@ -124,17 +112,15 @@ int inode_avail_count(void)
 static int inode_set_name(const char *path, inode_t **inode)
 {
     size_t len;
-    void  *mem;
 
     len = strlen(path);
-    mem = (void *)aos_malloc(len + 1);
-    if (!mem) {
-        return -ENOMEM;
-    }
-
-    memcpy(mem, (const void *)path, len);
-    (*inode)->i_name = (char *)mem;
-    (*inode)->i_name[len] = '\0';
+	if(len >= VFS_CONFIG_FILE_NAME_MAX_CHARS)
+	{
+		/* if the path chars are fill full,the last byte is placed by char '\0' */
+		len = VFS_CONFIG_FILE_NAME_MAX_CHARS - 1;
+		(*inode)->i_name[VFS_CONFIG_FILE_NAME_MAX_CHARS - 1] = '\0';
+	}
+    memcpy((*inode)->i_name, (const void *)path, len);
 
     return VFS_SUCCESS;
 }

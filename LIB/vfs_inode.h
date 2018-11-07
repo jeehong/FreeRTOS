@@ -1,13 +1,9 @@
-/*
- * Copyright (C) 2015-2017 Alibaba Group Holding Limited
- */
-
-#ifndef VFS_INODE_H
-#define VFS_INODE_H
+#ifndef __VFS_INODE_H__
+#define __VFS_INODE_H__
 
 
 #include <stdint.h>
-#include <vfs_machine.h>
+#include <vfs_conf.h>
 #include "types.h"
 
 #ifdef __cplusplus
@@ -51,12 +47,12 @@ union inode_ops_t {
 /* this structure represents inode for driver and fs*/
 typedef struct {
     union inode_ops_t ops;     /* inode operations */
-    void             *i_arg;   /* per inode private data */
-    char             *i_name;  /* name of inode */
+    void              *i_arg;  /* per inode private data */
+    char              i_name[VFS_CONFIG_FILE_NAME_MAX_CHARS];  /* name of inode */
     int               i_flags; /* flags for inode */
     uint8_t           type;    /* type for inode */
     uint8_t           refs;    /* refs for inode */
-    aos_mutex_t       mutex;   /* mutex for inode */
+    vfs_port_mutex_t       mutex;   /* mutex for inode */
 } inode_t;
 
 typedef struct {
@@ -73,7 +69,7 @@ struct file_ops {
     ssize_t (*read)  (file_t *fp, void *buf, size_t nbytes);
     ssize_t (*write) (file_t *fp, const void *buf, size_t nbytes);
     int     (*ioctl) (file_t *fp, int cmd, unsigned long arg);
-#ifdef AOS_CONFIG_VFS_POLL_SUPPORT
+#ifdef VFS_CONFIG_POLL_SUPPORT
     int     (*poll)  (file_t *fp, uint8_t flag, poll_notify_t notify, struct pollfd *fd, void *arg);
 #endif
 };
@@ -111,5 +107,5 @@ int     inode_release(const char *path);
 }
 #endif
 
-#endif /*VFS_INODE_H*/
+#endif /*__VFS_INODE_H__*/
 

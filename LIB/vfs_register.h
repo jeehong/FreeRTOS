@@ -1,9 +1,5 @@
-/*
- * Copyright (C) 2015-2017 Alibaba Group Holding Limited
- */
-
-#ifndef VFS_DRIVER_H
-#define VFS_DRIVER_H
+#ifndef __VFS_DRIVER_H__
+#define __VFS_DRIVER_H__
 
 #include <vfs_inode.h>
 
@@ -19,5 +15,5 @@ int aos_unregister_driver(const char *path);
 }
 #endif
 
-#endif    /*VFS_DRIVER_H*/
+#endif    /*__VFS_DRIVER_H__*/
 

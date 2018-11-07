@@ -1,9 +1,5 @@
-/*
- * Copyright (C) 2015-2017 Alibaba Group Holding Limited
- */
-
-#ifndef AOS_VFS_FILE_H
-#define AOS_VFS_FILE_H
+#ifndef __VFS_FILE_H__
+#define __VFS_FILE_H__
 
 #ifdef __cplusplus
 extern "C" {

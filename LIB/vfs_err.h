@@ -1,9 +1,5 @@
-/*
- * Copyright (C) 2015-2017 Alibaba Group Holding Limited
- */
-
-#ifndef VFS_ERRNO_H
-#define VFS_ERRNO_H
+#ifndef __VFS_ERRNO_H__
+#define __VFS_ERRNO_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -55,5 +51,5 @@ extern "C" {
 }
 #endif
 
-#endif /* VFS_ERRNO_H */
+#endif /*__VFS_ERRNO_H__*/
 
